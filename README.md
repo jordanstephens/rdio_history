@@ -6,7 +6,7 @@ A ruby gem for fetching Rdio listening history.
 
 _All of the code in this project borrows **HEAVILY** from some scripts at [chanian/rdio-history](https://github.com/chanian/rdio-history) posted over two years ago_. The interface exposed by those scripts was too limiting in my opinion. In the process of trying to patch a fork of that repo, I decided that the changes I wanted to make were too major. I opted to create a new gem, which includes a lot of code from [chanian/rdio-history](https://github.com/chanian/rdio-history), but is heavily refactored and exposes a much more open and flexible interface. **Major thanks and credit to [@chanian](https://github.com/chanian) for paving the way!**
 
-I'll also post the same disclaimer found at [@chanian](https://github.com/chanian) below.
+I'll also post the same disclaimer found at [chanian/rdio-history](https://github.com/chanian/rdio-history) below.
 
 ## Disclaimer
 
@@ -31,6 +31,8 @@ gem "rdio_history", github: "jordanstephens/rdio_history"
 Fetching history is easy, all you need is your Rdio username, and the number of *sources* you want to fetch. Rdio differentiates between a *source* and a *track*, as far as I can tell, a source is a group of tracks that were listened to together, like an album. It is important to note that the number of items you are requesting is not the number of *tracks*, but the number of *sources*. In the example below, that number is `10`.
 
     history = RdioHistory.fetch("your_rdio_username", 10)
+
+### Sources
     
 To get a list of sources in the response set:
 
@@ -108,6 +110,7 @@ A source looks like this:
         "time": "2014-12-18T23:06:24.277000
     }
 
+### Tracks
     
 To get a list of tracks in the response set:
     
