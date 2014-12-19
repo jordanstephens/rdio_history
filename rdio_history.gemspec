@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RdioHistory::VERSION
   spec.authors       = ["Jordan Stephens"]
   spec.email         = ["iam@jordanstephens.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Fetch Rdio listening history}
+  spec.description   = %q{Fetch Rdio listening history}
   spec.homepage      = ""
   spec.license       = "MIT"
 
