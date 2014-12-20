@@ -4,7 +4,7 @@ A ruby gem for fetching Rdio listening history.
 
 ## Origins
 
-_All of the code in this project borrows **HEAVILY** from some scripts at [chanian/rdio-history](https://github.com/chanian/rdio-history) posted over two years ago_. The interface exposed by those scripts was too limiting in my opinion. In the process of trying to patch a fork of that repo, I decided that the changes I wanted to make were too major. I opted to create a new gem, which includes a lot of code from [chanian/rdio-history](https://github.com/chanian/rdio-history), but is heavily refactored and exposes a much more open and flexible interface. **Major thanks and credit to [@chanian](https://github.com/chanian) for paving the way!**
+_All of the code in this project borrows **HEAVILY** from  [chanian/rdio-history](https://github.com/chanian/rdio-history)_. The interface exposed by those scripts was too limiting in my opinion—it prevented a lot of the data from the API from being exposed. In the process of trying to patch a fork of that repo, I decided that the changes I wanted to make were too major, so I opted to create a new gem. This new gem includes a lot of code from [chanian/rdio-history](https://github.com/chanian/rdio-history), but is heavily refactored and exposes much more of the available data from the API response. **Major thanks and credit to [@chanian](https://github.com/chanian) for paving the way!**
 
 I'll also post the same disclaimer found at [chanian/rdio-history](https://github.com/chanian/rdio-history) below.
 
