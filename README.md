@@ -107,7 +107,7 @@ A source looks like this:
             "time": "2014-12-18T23:06:24.277000"
         }],
         "extraTrackKeys": [],
-        "time": "2014-12-18T23:06:24.277000
+        "time": "2014-12-18T23:06:24.277000"
     }
 
 ### Tracks
