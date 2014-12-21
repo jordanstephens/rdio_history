@@ -23,8 +23,8 @@ module RdioHistory
 
       response = HTTPS.post_with_session(self, API::USER_PATH, params)
 
-      json_data = JSON.parse(response.body)
-      json_data["result"]
+      json_data = JSON.parse(response.body, symbolize_names: true)
+      json_data[:result]
     end
   end
 end

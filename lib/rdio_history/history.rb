@@ -12,18 +12,18 @@ module RdioHistory
 
     def fetch(length = DEFAULT_COUNT)
       post_data = {
-        user: "#{@session.user["key"]}",
+        user: "#{@session.user[:key]}",
         start: @cursor,
         count: length,
         method: API::HISTORY_METHOD
       }
 
       response = HTTPS.post_with_session(@session, API::HISTORY_PATH, post_data)
-      history_data = JSON.parse(response.body)
+      history_data = JSON.parse(response.body, symbolize_names: true)
 
       if history_data.length > 0
-        @cursor = history_data["result"]["last_transaction"]
-        @pages << history_data["result"]
+        @cursor = history_data[:result][:last_transaction]
+        @pages << history_data[:result]
       end
 
       self
@@ -31,13 +31,13 @@ module RdioHistory
 
     def sources
       @pages.map do |page|
-        page["sources"]
+        page[:sources]
       end.flatten
     end
 
     def tracks
       sources.map do |source|
-        source["tracks"]
+        source[:tracks]
       end.flatten
     end
   end
